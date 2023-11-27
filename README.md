@@ -1,2 +1,2 @@
-# homeassitant-addons
+# homeassistant-addons
 My Home Assistant Addons
