@@ -1,0 +1,19 @@
+{
+  "name": "n8n",
+  "version": "0.1",
+  "slug": "n8n",
+  "description": "n8n workflow automation tool",
+  "startup": "application",
+  "boot": "auto",
+  "options": {
+    "http_port": 5678,
+    "credential_key": ""
+  },
+  "schema": {
+    "http_port": "int",
+    "credential_key": "str"
+  },
+  "ports": {
+    "5678/tcp": 5678
+  }
+}
