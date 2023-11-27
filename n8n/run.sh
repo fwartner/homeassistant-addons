@@ -1,10 +1,13 @@
-#!/bin/bash
-set -e
+#!/usr/bin/with-contenv bashio
+# shellcheck shell=bash
 
-CONFIG_PATH=/data/options.json
+# Environment variables provided by add-on config
+N8N_PORT=$(bashio::config 'n8n_port')
+WEBHOOK_TUNNEL_URL=$(bashio::config 'webhook_tunnel_url')
 
-HTTP_PORT=$(jq --raw-output ".http_port" $CONFIG_PATH)
-CREDENTIAL_KEY=$(jq --raw-output ".credential_key" $CONFIG_PATH)
+# Set environment variables for n8n
+export N8N_PORT
+export WEBHOOK_TUNNEL_URL
 
-# Start n8n with specified HTTP port and credential key
-n8n start --webhook-url="http://${CREDENTIAL_KEY}:5678/" --port $HTTP_PORT
+# Start n8n
+n8n start --webhook-tunnel-url ${WEBHOOK_TUNNEL_URL}

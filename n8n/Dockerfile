@@ -1,5 +1,16 @@
 FROM n8nio/n8n
-RUN apk add --no-cache bash
+LABEL maintainer="your-name"
+
+# Environment variables for configuration
+ENV N8N_PORT 5678
+ENV WEBHOOK_TUNNEL_URL ""
+ENV GENERIC_TIMEZONE "UTC"
+
+# Expose web interface port
+EXPOSE ${N8N_PORT}
+
+# Copy run script
 COPY run.sh /
 RUN chmod a+x /run.sh
+
 CMD ["/run.sh"]

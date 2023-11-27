@@ -1,19 +1,16 @@
 {
-  "name": "n8n",
-  "version": "0.1",
-  "slug": "n8n",
-  "description": "n8n workflow automation tool",
+  "name": "n8n automation",
+  "version": "1.0",
+  "slug": "n8n_automation",
+  "description": "This is an n8n add-on for Home Assistant to automate workflows.",
   "startup": "application",
-  "boot": "auto",
+  "arch": ["amd64", "aarch64", "armhf", "armv7", "i386"],
   "options": {
-    "http_port": 5678,
-    "credential_key": ""
+    "n8n_port": 5678,
+    "webhook_tunnel_url": ""
   },
   "schema": {
-    "http_port": "int",
-    "credential_key": "str"
-  },
-  "ports": {
-    "5678/tcp": 5678
+    "n8n_port": "int",
+    "webhook_tunnel_url": "str"
   }
 }
