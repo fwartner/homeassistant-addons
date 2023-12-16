@@ -1,5 +1,5 @@
 FROM n8nio/n8n
-LABEL maintainer="your-name"
+LABEL maintainer="Florian Wartner <florian@wartner.io>"
 
 # Environment variables for configuration
 ENV N8N_PORT 5678

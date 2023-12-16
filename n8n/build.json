@@ -1,9 +1,0 @@
-{
-  "buildFrom": {
-    "amd64": "n8nio/n8n:latest",
-    "aarch64": "n8nio/n8n:latest",
-    "armhf": "n8nio/n8n:latest",
-    "armv7": "n8nio/n8n:latest",
-    "i386": "n8nio/n8n:latest"
-  }
-}

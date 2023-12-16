@@ -1,0 +1,24 @@
+name: "n8n - Workflow Automation"
+description: "This is an n8n add-on for Home Assistant to automate workflows."
+version: "1.0.0"
+slug: "n8n"
+init: true
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+url: "https://github.com/fwartner/homeassistant-addons/tree/main/n8n"
+options:
+  WEBHOOK_TUNNEL_URL:
+    name: Webhook URL
+    description: "The webhook URL to use for n8n."
+    required: false
+    type: "str"
+  N8N_PORT:
+    name: Port
+    description: "The port to use for n8n."
+    required: false
+    type: "str"
+    default: "5678"
