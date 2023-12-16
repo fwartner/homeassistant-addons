@@ -11,12 +11,12 @@ arch:
   - i386
 url: "https://github.com/fwartner/homeassistant-addons/tree/main/n8n"
 options:
-  WEBHOOK_TUNNEL_URL:
+  webhook_tunnel_url:
     name: Webhook URL
     description: "The webhook URL to use for n8n."
     required: false
     type: "str"
-  N8N_PORT:
+  n8n_port:
     name: Port
     description: "The port to use for n8n."
     required: false

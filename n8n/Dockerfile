@@ -11,6 +11,6 @@ EXPOSE ${N8N_PORT}
 
 # Copy run script
 COPY run.sh /
-RUN chmod a+x /run.sh
+RUN chmod +x /run.sh
 
 CMD ["/run.sh"]
